@@ -1,9 +1,10 @@
 const Weather = {
-    apiKey: "2e086fdb55cb7c15890337b33894a803",
+    
     // Adding Initial customization.
     init: function (config) {
       config = config ?? defaultConfig;
       let conf = { 
+        apiKey: "2e086fdb55cb7c15890337b33894a803",
         parentClassName: config.parentClassName ?? defaultConfig.parentClassName,
         isUserConfig : config.isUserConfig ?? defaultConfig.isUserConfig,
         autoRefresh: config.autoRefresh ?? defaultConfig.autoRefresh,
@@ -106,7 +107,7 @@ const Weather = {
         "https://api.openweathermap.org/data/2.5/weather?q=" +
           city +
           "&units=metric&appid=" +
-          this.apiKey
+          this.getConfiguration().apiKey
       )
         .then((response) => {
           if (!response.ok) {
@@ -152,6 +153,7 @@ const Weather = {
   
   // Defualt Configuration.
   let defaultConfig = {
+    apiKey: "Enter Weather API",
     parentClassName: "weather",
     isUserConfig: true,
     autoRefresh: true,
