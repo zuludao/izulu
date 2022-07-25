@@ -4,7 +4,7 @@ const Weather = {
     init: function (config) {
       config = config ?? defaultConfig;
       let conf = { 
-        apiKey: "2e086fdb55cb7c15890337b33894a803",
+        apiKey: "",
         parentClassName: config.parentClassName ?? defaultConfig.parentClassName,
         isUserConfig : config.isUserConfig ?? defaultConfig.isUserConfig,
         autoRefresh: config.autoRefresh ?? defaultConfig.autoRefresh,

@@ -1,8 +1,10 @@
 const Weather = {
-  apiKey: "2e086fdb55cb7c15890337b33894a803",
+    
   // Adding Initial customization.
   init: function (config) {
+    config = config ?? defaultConfig;
     let conf = { 
+      apiKey: "",
       parentClassName: config.parentClassName ?? defaultConfig.parentClassName,
       isUserConfig : config.isUserConfig ?? defaultConfig.isUserConfig,
       autoRefresh: config.autoRefresh ?? defaultConfig.autoRefresh,
@@ -11,10 +13,16 @@ const Weather = {
       backgroundColor: config.backgroundColor ?? defaultConfig.backgroundColor,
     };
 
-    defaultConfig = conf;
+    this.setConfiguration(conf);
+
+    const container = document.createElement("div");
+    container.className = "izulu-weather-container"; 
 
     document.querySelector(`.${conf.parentClassName}`).appendChild(container);
-    document.querySelector(`.${conf.parentClassName}`).innerHTML = ` 
+    document.querySelector(`.${container.className}`).innerHTML = ` 
+      
+      <!-- CREATING THE COLOR PICKER -->
+  
       <div class="color-picker">
         <div class="logo">
           <img src="iZulu" alt="" class="color-trigger" />
@@ -23,6 +31,8 @@ const Weather = {
         <span>Change Background Color</span>
       </div>
 
+
+      <!-- CREATING THE SEARCH BOX -->
 
       <div class="search">
         <input type="text" class="search-bar" placeholder="Search">
@@ -36,7 +46,13 @@ const Weather = {
         </button>
       </div>
 
-      <div class="weather loading">
+      <!-- 
+      
+      CREATING THE WEATHER WRAPPER TO STORE WEATHER DETAILS 
+      DEAFUALT SETTING ARE PROVIDED SHOULD THERE BE NO PROPERTIES IN Weather.init()
+
+      -->
+      <div class="weather-wrapper loading">
         <h2 class="city">Please enter the city</h2>
         <h1 class="temp">0°C</h1>
         <div class="flex">
@@ -74,6 +90,7 @@ const Weather = {
   },
   setConfiguration: function (config) {
     let conf = { 
+      apiKey: config.apiKey ?? "Enter WEATHER API KEY",
       parentClassName: config.parentClassName ?? defaultConfig.parentClassName,
       isUserConfig : config.isUserConfig ?? defaultConfig.isUserConfig,
       autoRefresh: config.autoRefresh ?? defaultConfig.autoRefresh,
@@ -91,7 +108,7 @@ const Weather = {
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         "&units=metric&appid=" +
-        this.apiKey
+        this.getConfiguration().apiKey
     )
       .then((response) => {
         if (!response.ok) {
@@ -119,7 +136,7 @@ const Weather = {
       "Humidity: " + humidity + "%";
     document.querySelector(".wind").innerText =
       "Wind speed: " + speed + " km/h";
-    document.querySelector(".weather").classList.remove("loading");
+    document.querySelector(".weather-wrapper").classList.remove("loading");
     if (this.getConfiguration().isBackroundImageEnabled) {
       document.body.style.backgroundImage =
       "url('https://source.unsplash.com/1920x1920/?" + name + "')";
@@ -137,6 +154,7 @@ const Weather = {
 
 // Defualt Configuration.
 let defaultConfig = {
+  apiKey: "Enter Weather API",
   parentClassName: "weather",
   isUserConfig: true,
   autoRefresh: true,
@@ -145,4 +163,4 @@ let defaultConfig = {
   defualtCity: "Johannesburg",
 }
 
-export { Weather };
+export { Weather }
