@@ -1,5 +1,5 @@
 const Weather = {
-    apiKey: "2e086fdb55cb7c15890337b33894a803",
+    apiKey: "",
     // Adding Initial customization.
     init: function (config) {
       config = config ?? defaultConfig;
@@ -19,6 +19,9 @@ const Weather = {
   
       document.querySelector(`.${conf.parentClassName}`).appendChild(container);
       document.querySelector(`.${container.className}`).innerHTML = ` 
+        
+        <!-- CREATING THE COLOR PICKER -->
+    
         <div class="color-picker">
           <div class="logo">
             <img src="iZulu" alt="" class="color-trigger" />
@@ -26,7 +29,9 @@ const Weather = {
           <input name="Color Picker" id="color" type="color"/>
           <span>Change Background Color</span>
         </div>
-  
+
+
+        <!-- CREATING THE SEARCH BOX -->
   
         <div class="search">
           <input type="text" class="search-bar" placeholder="Search">
@@ -40,6 +45,12 @@ const Weather = {
           </button>
         </div>
   
+        <!-- 
+        
+        CREATING THE WEATHER WRAPPER TO STORE WEATHER DETAILS 
+        DEAFUALT SETTING ARE PROVIDED SHOULD THERE BE NO PROPERTIES IN Weather.init()
+
+        -->
         <div class="weather-wrapper loading">
           <h2 class="city">Please enter the city</h2>
           <h1 class="temp">0°C</h1>
