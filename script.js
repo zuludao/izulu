@@ -1,4 +1,4 @@
-export const Weather = {
+const Weather = {
   apiKey: "2e086fdb55cb7c15890337b33894a803",
   // Adding Initial customization.
   init: function (config) {
@@ -151,4 +151,4 @@ let defaultConfig = {
 const container = document.createElement("div");
 container.className = "weather-container";
 
-export default { Weather };
+export { Weather };
