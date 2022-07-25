@@ -135,8 +135,6 @@ const Weather = {
   },
 };
 
-
-
 // Defualt Configuration.
 let defaultConfig = {
   parentClassName: "weather",
@@ -146,9 +144,5 @@ let defaultConfig = {
   backgroundColor: false,
   defualtCity: "Johannesburg",
 }
-
-// Creating HTML Elements dynamically inside container
-const container = document.createElement("div");
-container.className = "weather-container";
 
 export { Weather };
