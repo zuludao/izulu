@@ -13,7 +13,7 @@ const Weather = {
         backgroundColor: config.backgroundColor ?? defaultConfig.backgroundColor,
       };
   
-      defaultConfig = conf;
+      this.setConfiguration(conf);
 
       const container = document.createElement("div");
       container.className = "izulu-weather-container"; 
@@ -90,6 +90,7 @@ const Weather = {
     },
     setConfiguration: function (config) {
       let conf = { 
+        apiKey: config.apiKey ?? "Enter WEATHER API KEY",
         parentClassName: config.parentClassName ?? defaultConfig.parentClassName,
         isUserConfig : config.isUserConfig ?? defaultConfig.isUserConfig,
         autoRefresh: config.autoRefresh ?? defaultConfig.autoRefresh,
