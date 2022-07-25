@@ -1,5 +1,5 @@
 const Weather = {
-    apiKey: "",
+    apiKey: "2e086fdb55cb7c15890337b33894a803",
     // Adding Initial customization.
     init: function (config) {
       config = config ?? defaultConfig;
