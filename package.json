@@ -1,0 +1,32 @@
+{
+  "name": "izulu",
+  "version": "1.0.3",
+  "description": "A weather widget for the zuludao, feel free to use via npm package.",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuludao/izulu.git"
+  },
+  "devDependencies": {
+    "mocha": "10.0.0",
+    "chai": "4.3.6"
+  },
+  "keywords": [
+    "weather",
+    "widget",
+    "zuludao",
+    "typescript",
+    "geolocation",
+    "sky"
+  ],
+  "author": "Zulu DAO",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/zuludao/izulu/issues"
+  },
+  "homepage": "https://github.com/zuludao/izulu#readme"
+}
