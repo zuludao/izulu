@@ -1,6 +1,6 @@
 {
   "name": "izulu",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A weather widget for the zuludao, feel free to use via npm package.",
   "main": "script.js",
   "type": "module",
