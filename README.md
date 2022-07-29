@@ -105,10 +105,17 @@ export default App;
 
 ### Run Tests
 
-All tests are located inside __test__ folder
+All tests are located inside __test__ folder using Mocha & Chai or Jest.
 
 ```bash
 npm test
+```
+### Run Build
+
+All tests are located inside __test__ folder using Mocha & Chai or Jest.
+
+```bash
+npm run build-lib
 ```
 
 ## Contributing
