@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Today</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <!-- <script type="test/javascript" src="https://raw.githubusercontent.com/zuludao/izulu/master/script.js"></script> -->
+  <script type="text/javascript" src="https://gitcdn.link/cdn/zuludao/izulu/master/vanilla.js">
+
+  </script>
+</head>
+
+<body>
+  <div class="weather"></div>
+</body>
+
+<script>
+  setTimeout(function() {
+    Weather.init({isUserConfig : true, apiKey: ""});
+  })
+</script>
+</html>

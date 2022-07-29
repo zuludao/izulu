@@ -1,0 +1,6 @@
+{
+    
+    "name": "izulu-react",
+    "private": true,
+    "main": "./weather.js"
+}
