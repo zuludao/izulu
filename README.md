@@ -1,5 +1,6 @@
-#  Izulu Weather 
+#  Izulu (Weather) 
 
+Izulu meaning weather / heaven in the african language of ZULU. 
 A weather widget to display weather conditions for any city in the world. 
 
 ### Prerequisites
@@ -43,9 +44,9 @@ https://gitcdn.link/cdn/zuludao/izulu/master/style.css
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://gitcdn.link/cdn/zuludao/izulu/master/style.css">
   <!-- <script type="test/javascript"
-   src="https://raw.githubusercontent.com/zuludao/izulu/master/weather.vanilla.js">
+   src="https://raw.githubusercontent.com/zuludao/izulu/main/weather.vanilla.js">
       </script> THIS WONT WORK! -->
-  <script type="text/javascript" src="https://gitcdn.link/cdn/zuludao/izulu/master/weather.vanilla.js">
+  <script type="text/javascript" src="https://gitcdn.link/cdn/zuludao/izulu/main/weather.vanilla.js">
 
   </script>
 </head>
